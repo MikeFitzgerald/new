@@ -7,7 +7,34 @@ import (
 	"strings"
 )
 
-var attributes = []byte("# All text files should have the \"lf\" (Unix) line endings\n* text eol=lf\n\n# Explicitly declare text files you want to always be normalized and converted\n# to native line endings on checkout.\n*.java text\n*.js text\n*.css text\n*.html text\n\n# Denote all files that are truly binary and should not be modified.\n*.png binary\n*.jpg binary\n*.pdf binary\n*.eot binary\n*.ttf binary\n*.gzip binary\n*.gz binary\n*.ai binary\n*.eps binary\n*.swf binary\n*.gif binary\n*.mp4 binary\n*.dll binary\n*.class binary\n*.exe binary\n*.ico binary\n*.doc binary")
+var attributes = []byte(`# All text files should have the "lf" (Unix) line endings
+* text eol=lf
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.java text
+*.js text
+*.css text
+*.html text
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.pdf binary
+*.eot binary
+*.ttf binary
+*.gzip binary
+*.gz binary
+*.ai binary
+*.eps binary
+*.swf binary
+*.gif binary
+*.mp4 binary
+*.dll binary
+*.class binary
+*.exe binary
+*.ico binary
+*.doc binary`)
 
 func check(e error) {
 	if e != nil {
